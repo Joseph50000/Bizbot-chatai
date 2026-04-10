@@ -1,0 +1,20 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Auto-generated conversation title"
+    },
+    "last_message": {
+      "type": "string",
+      "description": "Preview of the last message"
+    },
+    "message_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Total messages in conversation"
+    }
+  },
+  "required": ["title"]
+}

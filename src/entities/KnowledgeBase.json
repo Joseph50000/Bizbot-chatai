@@ -1,0 +1,25 @@
+{
+  "name": "KnowledgeBase",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the knowledge entry"
+    },
+    "content": {
+      "type": "string",
+      "description": "The actual knowledge content"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["FAQ", "Procedure", "Policy", "Product", "General"],
+      "description": "Category of knowledge"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether this knowledge entry is active"
+    }
+  },
+  "required": ["title", "content", "category"]
+}
