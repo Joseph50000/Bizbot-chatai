@@ -3,9 +3,19 @@
 
 import { createClient } from "@base44/sdk";
 
+const APP_ID = import.meta.env.VITE_BASE44_APP_ID;
+const API_KEY = import.meta.env.VITE_BASE44_API_KEY;
+
+if (!APP_ID || !API_KEY) {
+  console.error(
+    "[BizBot] Missing environment variables: VITE_BASE44_APP_ID and/or VITE_BASE44_API_KEY. " +
+    "Make sure they are set in Vercel → Settings → Environment Variables."
+  );
+}
+
 const _client = createClient({
-  appId: import.meta.env.VITE_BASE44_APP_ID,
-  serviceToken: import.meta.env.VITE_BASE44_API_KEY,
+  appId: APP_ID ?? "missing-app-id",
+  serviceToken: API_KEY ?? "missing-api-key",
   requiresAuth: false,
 });
 
