@@ -46,7 +46,7 @@ export default function ChatInput({ onSend, disabled }) {
         </Button>
       </div>
       <p className="text-[10px] text-muted-foreground/60 text-center mt-2">
-        AI assistant powered by your company knowledge base
+        AI assistant powered by your company knowledge base — By Benoît HOUNYOVI
       </p>
     </form>
   );

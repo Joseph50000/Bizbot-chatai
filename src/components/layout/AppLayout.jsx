@@ -1,5 +1,5 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { MessageSquare, BookOpen, Menu, X } from 'lucide-react';
+import { MessageSquare, BookOpen, Menu, X, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useState } from 'react';
@@ -52,6 +52,16 @@ export default function AppLayout() {
             </Link>
           ))}
         </nav>
+
+        <div className="ml-auto flex items-center gap-4">
+          <a 
+            href="https://portfolio-olive-chi-91.vercel.app/" 
+            className="flex items-center gap-2 text-xs font-bold text-primary bg-primary/10 hover:bg-primary/20 transition-all px-4 py-2 rounded-xl border border-primary/20"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Retour Portfolio
+          </a>
+        </div>
       </header>
 
       {/* Mobile menu */}
